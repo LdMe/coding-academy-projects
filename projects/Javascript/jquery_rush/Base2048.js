@@ -99,9 +99,7 @@
 			x=parseInt(x);
 			y=parseInt(y);
 			for(let i = y +1; i < 10; i++) {
-				console.log("length:"+ i.toString());
 				if($("[x='"+x+"'][y='"+i+"']").length){
-					console.log("nbr: "+ $("[x='"+x+"'][y='"+i+"']").attr("nbr"));
 					if($("[x='"+x+"'][y='"+i+"']").attr("nbr") == 0){
 
 					counter ++;
@@ -130,13 +128,10 @@
 				let offset= -getLeft(x,y);
 				let element1= $("[x='"+(i + offset)+"'][y='"+y+"']");
 				if(element1.length && offset< 0) {
-					console.log("exists");
 					let x1=element1.attr("x");
 					let x2=element1.attr("y");
 					let num2 = element1.attr("nbr");
-					console.log(num2);
 					if(num2== 0) {
-						console.log("is zero");
 						element1.attr("nbr",num);
 						element1.text(num.toString());
 						element.attr("nbr",num2);
@@ -150,16 +145,12 @@
 		function mergeRowLeft(y){
 			let done =false;
 
-			console.log("moving");
 			for(let i = 0; i < 3; i++) {
 				let element1= $("[x='"+i+"'][y='"+y+"']");
 				let element2= $("[x='"+(i + 1)+"'][y='"+y+"']");
 				let num1= element1.attr("nbr");
 				let num2= element2.attr("nbr");
-				console.log("num1:"+num1+", num2:"+num2);
 				if(num1== num2) {
-
-					console.log("fuckingfuck");
 					element1.attr("nbr",num1* 2);
 					element1.text((num1 * 2).toString());
 					element2.attr("nbr",0);
@@ -182,13 +173,10 @@
 				let offset= getRight(x,y);
 				let element1= $("[x='"+(i + offset)+"'][y='"+y+"']");
 				if(element1.length && offset> 0) {
-					console.log("exists");
 					let x1=element1.attr("x");
 					let x2=element1.attr("y");
 					let num2 = element1.attr("nbr");
-					console.log(num2);
 					if(num2== 0) {
-						console.log("is zero");
 						element1.attr("nbr",num);
 						element1.text(num.toString());
 						element.attr("nbr",num2);
@@ -201,17 +189,12 @@
 		}
 		function mergeRowRight(y){
 			let done =false;
-
-			console.log("moving");
 			for(let i = 3; i >0; i--) {
 				let element1= $("[x='"+i+"'][y='"+y+"']");
 				let element2= $("[x='"+(i - 1)+"'][y='"+y+"']");
 				let num1= element1.attr("nbr");
 				let num2= element2.attr("nbr");
-				console.log("num1:"+num1+", num2:"+num2);
 				if(num1== num2) {
-
-					console.log("fuckingfuck");
 					element1.attr("nbr",num1* 2);
 					element1.text((num1 * 2).toString());
 					element2.attr("nbr",0);
@@ -234,13 +217,10 @@
 				let offset= getDown(x,y);
 				let element1= $("[x='"+x+"'][y='"+(i + offset)+"']");
 				if(element1.length && offset> 0) {
-					console.log("exists");
 					let x1=element1.attr("x");
 					let x2=element1.attr("y");
 					let num2 = element1.attr("nbr");
-					console.log(num2);
 					if(num2== 0) {
-						console.log("is zero");
 						element1.attr("nbr",num);
 						element1.text(num.toString());
 						element.attr("nbr",num2);
@@ -253,17 +233,12 @@
 		}
 		function mergeColDown(x){
 			let done =false;
-
-			console.log("moving");
 			for(let i = 3; i >0; i--) {
 				let element1= $("[x='"+x+"'][y='"+i+"']");
 				let element2= $("[x='"+x+"'][y='"+(i - 1)+"']");
 				let num1= element1.attr("nbr");
 				let num2= element2.attr("nbr");
-				console.log("num1:"+num1+", num2:"+num2);
 				if(num1== num2) {
-
-					console.log("fuckingfuck");
 					element1.attr("nbr",num1* 2);
 					element1.text((num1 * 2).toString());
 					element2.attr("nbr",0);
@@ -286,13 +261,10 @@
 				let offset= -getUp(x,y);
 				let element1= $("[x='"+x+"'][y='"+(i + offset)+"']");
 				if(element1.length && offset< 0) {
-					console.log("exists");
 					let x1=element1.attr("x");
 					let x2=element1.attr("y");
 					let num2 = element1.attr("nbr");
-					console.log(num2);
 					if(num2== 0) {
-						console.log("is zero");
 						element1.attr("nbr",num);
 						element1.text(num.toString());
 						element.attr("nbr",num2);
@@ -315,16 +287,12 @@
 		function mergeColUp(x){
 			let done =false;
 
-			console.log("moving");
 			for(let i = 0; i <4; i++) {
 				let element1= $("[x='"+x+"'][y='"+i+"']");
 				let element2= $("[x='"+x+"'][y='"+(i+1)+"']");
 				let num1= element1.attr("nbr");
 				let num2= element2.attr("nbr");
-				console.log("num1:"+num1+", num2:"+num2);
 				if(num1== num2) {
-
-					console.log("fuckingfuck");
 					element1.attr("nbr",num1* 2);
 					element1.text((num1 * 2).toString());
 					element2.attr("nbr",0);
@@ -441,19 +409,15 @@
 		$("html").keydown(function(event) {
 			switch (event["key"]) {
 				case 'ArrowLeft':
-					console.log("left");
 					moveLeft();
 					break;
 				case 'ArrowRight':
-					console.log("right");
 					moveRight();
 					break;
 				case 'ArrowUp':
-					console.log("up");
 					moveUp();
 					break;
 				case 'ArrowDown':
-					console.log("down");
 					moveDown();
 					break;
 
