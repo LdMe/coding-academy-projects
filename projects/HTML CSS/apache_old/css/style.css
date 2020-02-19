@@ -1,0 +1,63 @@
+
+#logo {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 20%;
+	top:;
+}
+.nav-wrapper{
+	background-color: #cc9;
+
+}
+.first-image {
+	top:9%;
+}
+.activator {
+	width: 30%;
+}
+body {
+	width:80%;
+	margin-left:10%;
+	background-color:#ffa;
+}
+.card-title {
+	top:2px;
+
+}
+.card {
+
+	background-color:#eeb;
+}
+#first-one {
+	font-size: 1vw;
+	width:50%;
+	margin-right: 0px;
+	color: #a88;
+	font-weight: 800;
+}
+#first-one-title {
+	font-size: 5vw;
+	width:80%;
+	margin-right: 10%;
+	color: #946;
+}
+#second-one {
+	width:50%;
+	margin-left: 0px;
+	color:#555;
+}
+.medium {
+	width: 50%;
+margin: auto;
+    margin-top: auto;
+margin-top: 10%;
+}
+.card-title.activator.grey-text.text-darken-4 {
+	width: 100%;
+	left:0;
+}
+.hide-on-med-and-down {
+	right:0;
+	width:10%;
+}
