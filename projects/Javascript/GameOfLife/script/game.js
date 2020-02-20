@@ -21,7 +21,6 @@ $(document).ready(function(){
 			});
 			$(".density").on("change",function(){
 				DENSITY= $(".density").val() / 100.0;
-				console.log(DENSITY);
 			});
 			$(".reset_graph").on("click",function(){
 				game.area1=[];
@@ -34,7 +33,7 @@ $(document).ready(function(){
 						Plotly.deleteTraces('graph',0);
 					}
 				} catch(error){
-					console.log("cannot delete more traces");
+					console.log("can't delete more traces");
 				}
 
 
@@ -141,8 +140,6 @@ $(document).ready(function(){
 			$(".cell").on("click",function(){
 				let i = $(this).attr("i");
 				let j = $(this).attr("j");
-				console.log("i:"+i);
-				console.log("j:"+j);
 				game.board.cells[i][j].changeState();
 				$(this).toggleClass("alive");
 				$(this).toggleClass("dead");
@@ -321,7 +318,7 @@ $(document).ready(function(){
 		let date= new Date();
 
 		let name= "capture_"+stayAlive.toString()+"-"+revive.toString()+"_"+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+"-"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+".png";
-		console.log(name);
+		
 		$(".nameInput").attr("value",name);
 		$("#captureForm").submit();
 		
@@ -329,7 +326,6 @@ $(document).ready(function(){
 	
 	play(){
 
-		console.log("let's play!");
 		this.board.act();
 		$(".showFrame").text(parseInt($(".showFrame").text())+1);
 		if(!this.stopped){
