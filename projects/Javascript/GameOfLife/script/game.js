@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var CELL_COUNT = $(".quantity").val();
-	var DENSITY = $(".density").val();
+	var DENSITY = $(".density").val() / 100.0;
 	let width = $(".game").width();
 	let cell_width= width / CELL_COUNT;
 	let height = $(".game").height();
