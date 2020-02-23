@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/grundschrift" type="text/css"/> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/projects.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<title>My Projects</title>
+</head>
+<body>
+	<nav class="navbar navbar-light  fixed-top">
+		<a class="navbar-brand" href="index.html" >Home</a>
+		<a class="navbar-brand" href="projects.html" >My projects</a>
+		<a class="navbar-brand" href="contact.html" >Contact</a>
+	</nav>
+	<div class="container-fluid intro">
+		<h1>My projects</h1>
+		<div >
+			<div class="row">
+				<div class="col">
+					<h2>Epitech Projects</h2>
+					<div class="row">
+						<div class="card col-6 col-lg-4">
+							<div class="card-body" >
+								<h2 class="card-title">Javascript</h2>
+								<div class="card">
+									<div class="card-body" >
+										<h2 class="card-title">Game of Life</h2>
+										<p class="card-text">Conway's Game of Life simulated. Parameters can be changed. To enable image capture, go to <code>Python/Flask/image_saver</code> and run <code>index.py</code></p>
+										<a target="_blank" rel="noopener noreferrer" href="../../Javascript/GameOfLife/" class=" stretched-link"></a>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body" >
+										<h2 class="card-title">2048</h2>
+										<p class="card-text">My version of 2048 game. Use arrow keys to move rows/columns</p>
+										<a target="_blank" rel="noopener noreferrer" href="../../Javascript/2048/" class=" stretched-link"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					<div class="card col-6 col-lg-4">
+						<div class="card-body" >
+							<h2 class="card-title">PHP</h2>
+							<div class="card">
+								<div class="card-body" >
+									<h2 class="card-title">Movies Web</h2>
+									<p class="card-text">To see it you must go to <code>PHP/symfony/movies</code> and run <code>symfony server:start</code></p>
+									<p class="card-text"><small class="text-muted">Connection port is <code>8000</code></small></p>
+									<a target="_blank" rel="noopener noreferrer" href="https://127.0.0.1:8000" class=" stretched-link"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card col-6 col-lg-4">
+						<div class="card-body" >
+							<h2 class="card-title">MERN</h2>
+							<div class="card">
+								<div class="card-body" >
+									<h2 class="card-title">La Boheme</h2>
+									<p class="card-text">La Boheme restaurant's web page. First, go to <code>MERN/MERN_API/</code> and run <code>npm start</code>. Open a new terminal and go to <code>MERN/MERN_LaBoheme</code> and run <code>npm start</code> </p>
+									<p class="card-text"><small class="text-muted">If you have issues starting the server, run <code>npm install</code>. Frontend conenction port is <code>3000</code>. Backend conenction port is <code>8000</code></small></p>
+									<a target="_blank" rel="noopener noreferrer" href="http://127.0.0.1:3000" class=" stretched-link"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card col-6 col-lg-4">
+						<div class="card-body" >
+							<h2 class="card-title">Python</h2>
+							<div class="card">
+								<div class="card-body" >
+									<h2 class="card-title">Video Stream</h2>
+									<p class="card-text">To see the vieo stream connect a web cam (you can use your pc's own). Then go to <code>Python/Flask/video_stream/</code> and run <code>python stream.py</code></p>
+									<p class="card-text"><small class="text-muted">You may have to install <code>opencv-python</code> and some other modules with <code>pip</code>. Connection port is <code>5000</code></small></p>
+									<a target="_blank" rel="noopener noreferrer" href="http://127.0.0.1:5000" class=" stretched-link"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card col-6 col-lg-4">
+						<div class="card-body" >
+							<h2 class="card-title">Ruby on Rails</h2>
+							<div class="card">
+								<div class="card-body" >
+									<h2 class="card-title">Blog</h2>
+									<p class="card-text">simple blog made with Ruby on Rails. Go to <code>Ruby/blog/</code> and run <code>ruby server -p 3001</code></p>
+									<p class="card-text"><small class="text-muted">Connection port is <code>3001</code></small></p>
+									<a target="_blank" rel="noopener noreferrer" href="http://127.0.0.1:3001" class=" stretched-link"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+<footer>Danel Lafuente 2019</footer>
+</body>
+</html>

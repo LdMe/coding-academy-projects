@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Readme</title>
+</head>
+<body>
+	<h1>Readme </h1>
+	<h2>API structure</h2>
+	<ul>
+		<li><p>app.js requires config.js and initializes app </p></li>
+		<li><p>Models create schemas for the collections</p></li>
+		<li><p>routers call cotrollers depending on the route</p></li>
+		<li><p>controllers take the request and find/create/update/delete collections using models</p></li>
+		<li><p>Some request functions use middlewares for user verification / image upload</p></li>
+
+	</ul>
+	<h2>Users</h2>
+	<p>Username is unique, so it cannot be changed (you can change it in the user model)</p>
+	<p>email, bio and password can be changed. If value not sent in request, it will update the rest (update email or bio but not password...)</p>
+	<h2>Posts</h2>
+	<p>Posts have: required: (title,user (owner id) ),optional: (description, image) description,</p>
+	<h2>Images</h2>
+	<p>now it is specific for posts, but can be adapted easily (I think)</p>
+	<p>By default, images are saved in public/uploads/&ltusername&gt/posts/</p>
+	<p>To see an image, send get request to "/images/&ltusername&gt/&ltpost id&gt"</p>
+	<h2>DONE</h2>
+	<ul>
+		<li><p>User register/login/logout/edit/show</p></li>
+		<li><p>Post show(one/all)/delete/create/modify(with/without image)</p></li>
+	</ul>
+	<h2>TODO</h2>
+	<ul>
+		<li><b>add socket.io functionalities to enable real-time updates</b></li>
+		<li><p>User delete</p></li>
+		<li><p>Comment create/show/delete/(modify?)</p></li>
+		<li><p>friends/followers</p></li>
+	</ul>
+
+
+<footer>Danel Lafuente 2020</footer>
+</body>
+</html>

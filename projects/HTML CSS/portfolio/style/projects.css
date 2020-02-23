@@ -1,0 +1,11 @@
+
+body {
+	background-image: url("../img/projects.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	 
+	 font-size: calc(1vw + 1vh);
+}
+.card {
+	background-color: rgba(255,255,255,0.5);
+}

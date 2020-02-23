@@ -1,0 +1,54 @@
+
+nav {
+	background-color: rgba(255,255,255,0.5);
+
+	font-weight: 800;
+}
+h1, h2, h3,h4,h5 {
+	font-family: 'GrundschriftRegular';
+	text-align: center;
+	font-weight: bolder;
+}
+p {
+  font-family: 'GrundschriftRegular';
+   font-weight: bolder;
+   font-style: normal;
+} 
+footer{
+	position: relative;
+	margin-top: 100vh;
+	font-weight: 800;
+
+	background-color: rgba(255,255,255,0.5);
+}
+
+.intro {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding-top: 10vh;
+	text-align: justify;
+	font-weight: 800;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.profilePic {
+	position: relative ;
+	width: 15vw;
+	
+	border-radius: 50%;
+}
+.round{
+	border-radius: 50%;
+}
+.icon {
+	
+	width: 5vh;
+}
+.link {
+	position: relative;
+	margin-top: 5%;
+}
+.card-title {
+	border-bottom: 1px solid grey;
+}

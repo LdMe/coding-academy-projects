@@ -4,38 +4,6 @@ from flask import Flask, render_template, Response
 import cv2
 cap= None;
 cap=cv2.VideoCapture(-1)
-"""
-for i in range(-2,10):
-	if(cap!= None and cap.isOpened()):
-		print("duck my sick")
-		break
-	try:
-		cap=cv2.VideoCapture(i)
-		print(cap)
-		if(cap != None and cap.isOpened()):
-			print(str(i)+" index connected")
-			break
-		else:
-			print("not working");
-	except Exception as e:
-		print(str(i)+" index can't be connected")
-for i in range(-2,10):
-	if(cap!=None and cap.isOpened()):
-		print("duck my sick")
-		break
-	try:
-		print("/dev/video"+str(i))
-		cap=cv2.VideoCapture("/dev/video"+str(i))
-		print(cap)
-		if(cap != None and cap.isOpened()):
-			print(str(i)+" index connected")
-			break
-		else:
-			print("name not working");
-	except Exception as e:
-		print(str(i)+" index can't be connected")
-"""
-
 
 app = Flask(__name__,template_folder="Views")
 
