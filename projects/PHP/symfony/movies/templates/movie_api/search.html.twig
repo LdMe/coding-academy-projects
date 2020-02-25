@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MovieApiController!{% endblock %}
+{% block body %}
+    <h1>Search movie</h1>
+
+    {{ form_start(movieFindForm) }}
+    	{{ form_row(movieFindForm.Title) }}
+
+        <button class="btn">Search</button>
+    {{ form_end(movieFindForm) }}
+{% endblock %}
