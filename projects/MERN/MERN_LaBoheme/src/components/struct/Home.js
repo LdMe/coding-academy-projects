@@ -22,9 +22,6 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-
-    
-    
     axios.get('/product').then(res => {
       console.log("first step");
       if(res.data){

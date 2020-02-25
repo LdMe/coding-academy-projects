@@ -34,15 +34,21 @@ config={
 		this.app= this.express();
 		this.app.use(cors({
 			//Only localhost access TODO: access for everyone
-			origin: ['http://localhost:3000'],
+			origin: ['http://localhost:3000','http://127.0.0.1:3000'],
 			methods:["POST", "PUT", "OPTIONS", "DELETE", "GET"],
 			credentials: true
 		}));
 		this.app.use(this.express.json());
 		this.app.use(this.express.urlencoded({extended:true}));
 		//this.app.use(bodyParser());
-		
-
+		/*
+		this.app.options("*", cors({
+			//Only localhost access TODO: access for everyone
+			origin: ['http://localhost:3000'],
+			methods:["POST", "PUT", "OPTIONS", "DELETE", "GET"],
+			credentials: true
+		}));
+		*/
 		// middleware to save session
 		this.app.use(cookieParser());
 		this.app.use(session({
@@ -51,14 +57,14 @@ config={
 				httpOnly: false,
 				maxAge  : 24*60*60*10
 			},
-			secret: 'amijosmios',
+			secret: 'secretWord',
 			resave: false,
 			saveUninitialized: true
 		}))
 		this.app.use(router);
 		let port = this.port;
 		this.app.listen(port, function () {
-			console.log('App listening on '+ port);
+			console.log('Example app listening on '+ port);
 		});
 		return this.app;
 	}

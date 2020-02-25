@@ -61,7 +61,7 @@ class ProductCreateComponent extends React.Component {
             this.setState({categories :categories});
 
         }).catch(error => {
-            console.log("fucking!!");
+            console.log("error");
         });
         
     }

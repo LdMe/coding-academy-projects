@@ -65,7 +65,7 @@ class ProductEditComponent extends React.Component {
             const categories = res.data;
             this.setState({categories :categories});
         }).catch(error => {
-            console.log("fucking!!");
+            console.log("error");
         });
     }
     titleHandler =(event) => {

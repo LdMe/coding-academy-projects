@@ -75,9 +75,9 @@ PostEditController= {
 				}
 				body.visibility ? new_post["visibility"]=body.visibility: null;
 				new_post["last_update"]= Date.now().toString();
-				
+				console.log(new_post);
 				if(req.file){
-					
+					console.log(req.file);
 					fs.unlink(config.dirname+'/public/uploads/'+new_user.username+"/posts/"+post_object.image,function(err){
 						console.log(err);
 					});
@@ -85,13 +85,14 @@ PostEditController= {
 				}
 				post.updateOne({_id:_id, user:new_user},new_post, function(error,post_created){
 					if(err){
-						
+						console.log("error");
+						console.log(err.message);
 						return res.status(500).send(err.message);
 					}
 					if(!post_created){
 						return res.status(500).send("could not edit post");
 					}
-					
+					console.log("post edited");
 					return res.send("post edited succesfully");
 				});
 			});
