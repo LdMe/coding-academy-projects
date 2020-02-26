@@ -4,19 +4,6 @@ from video import Video
 
 
 
-print("toto")
-"""
-while 1:
-	success,frame = cap.read()
-	cv2.imshow("frame",frame)
-	cv.waitKey()
-"""
-"""
-for x in range(-1,10):
-	cap=cv2.VideoCapture(x)
-	if(cv2.VideoCapture.open(x)):
-		break
-"""
 app = Flask(__name__,template_folder="Views")
 
 @app.route('/')
@@ -25,11 +12,13 @@ def index():
 
 def gen():
 	vid= Video.init()
+	vid.start()
 	while True:
 		frame= vid.getFrame()
-		yield (b'--frame\r\n'
-			b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-
+		if(frame):
+			yield (b'--frame\r\n'
+				b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+	vid.stop()	
 @app.route('/video_feed')
 def video_feed():
     return Response(gen(),

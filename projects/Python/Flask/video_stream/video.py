@@ -1,28 +1,40 @@
 import cv2
 from threading import Thread
 import time
+
+
 class Video:
-	single = None
-	frame= None
-	cap=None
-	def __init__(self):
-		if(Video.single):
-			raise Exception("singleton already exists")
-		else:
-			Video.single=self;
-		Video.cap= cv2.VideoCapture(-1)
-		updateThread= Thread(target=Video.updateFrame, args=())
-		updateThread.start()
-	def init():
+	single=None
+	def __init__(self, src=0):
+		self.stream = cv2.VideoCapture(src)
+		(self.grabbed, self.frame) = self.stream.read()
+		self.stopped = True
+		Video.single=self
+	def start(self):
+		if(self.stopped):
+			self.stopped = False
+			Thread(target=self.get, args=()).start()
+			
+			return self
+	@classmethod
+	def init(Video):
 		if not Video.single:
-			Video()
+			return Video()
 		return Video.single
-	def updateFrame():
-		while 1:
-			success,frame = Video.cap.read()
-			Video.frame= cv2.imencode('.jpeg',frame)[1].tostring()
-			time.sleep(0.1)
 	def getFrame(self):
-		success,frame = Video.cap.read()
-		Video.frame= cv2.imencode('.jpeg',frame)[1].tostring()		
-		return Video.frame
+		if self.frame is None:
+			return self.frame
+		return cv2.imencode('.jpeg',self.frame)[1].tostring()
+	def get(self):
+		try:
+			while not self.stopped:
+				if not self.grabbed:
+					self.stop()
+				else:
+					(self.grabbed, self.frame) = self.stream.read()
+		except Exception as e:
+			Video.single=None
+			self.stop()
+			del self
+	def stop(self):
+		self.stopped = True
