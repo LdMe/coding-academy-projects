@@ -10,6 +10,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<title>My Portfolio</title>
+	<style type="text/css">
+		.row {
+			margin-top: 1%;
+		}
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-light  fixed-top">
@@ -19,36 +24,31 @@
 		I want to contact you" >Contact</a>
 	</nav>
 	<div class="container-fluid intro">
-		<h1>Welcome to my page</h1>
-		<div >
-			<div class="row">
-				<div class="col-3 ">
-					<img class="profilePic" src="img/profile.png">
-					<div class="link">
-						<a href="https://www.linkedin.com/in/danel-lafuente/" target="_blank" rel="noopener noreferrer"><img class="icon" src="img/linkedin.png">
-							<span>Go to my Linkedin</span>
-						</a>
-					</div>
-					
-					<div class="link">
-						<a href="https://github.com/LdMe/" target="_blank" rel="noopener noreferrer"><img class="icon round" src="img/github.png">
-							<span>Visit my Github page</span>
-						</a>
-					</div>
-					<div class="link">
-						<a href="https://stackoverflow.com/users/12931779/ldme" target="_blank" rel="noopener noreferrer"><img class="icon round" src="img/stack-overflow.png">
-							<span>Ask me something at Stack Overflow</span>
-						</a>
-					</div>
-					<div class="link">
-						<a href="https://ldme.itch.io/" target="_blank" rel="noopener noreferrer"><img class="icon" src="img/itchio.png">
-							<span>Check my itch.io page</span>
-						</a>
-					</div>
-
+		<h1>Contact me</h1>
+		<div style="width: 50%; margin:auto;padding-bottom: 5%;">
+			<form style="text-align: center;">
+				<div class="row">
+					<label class="col-4" for="name">Name</label>
+					<input class="col-6" type="text" name="name" id="name" placeholder="mandatory" required>
 				</div>
-				
-			</div>
+				<div class="row">
+					<label class="col-4" for="email">Email</label>
+					<input class="col-6" type="text" name="email" id="email" placeholder="mandatory" required>
+				</div>
+				<div class="row">
+					<label class="col-4" for="phone">Phone</label>
+					<input class="col-6" type="tel" name="phone" id="phone" placeholder="not mandatory">
+				</div>
+				<div class="row">
+					<label class="col-4" for="message">Message</label>
+					<textarea class="col-6" name="message" id="message" placeholder="mandatory" required></textarea>
+				</div>
+				<div class="row">
+					<div class="col-4" >&nbsp;</div>
+					<div class=" col-6"><button class="btn btn-success col-6 " type="submit">Submit</button></div>
+					
+				</div>
+			</form>
 		</div>
 
 	</div>
